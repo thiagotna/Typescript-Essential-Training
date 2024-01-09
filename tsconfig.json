@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        //"outDir": "build", folder output name
+        "target": "ESNext", //JS version to be outputed
+        "ignoreDeprecations": "5.0", //Ignore deprecated JS version for a specific Typrescript version
+        //"noEmit": true Emmit output file
+    },
+    "include": ["src/**/*"]
+}
