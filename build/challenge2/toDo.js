@@ -13,8 +13,8 @@ function addTodoItem(todo) {
     const id = getNextId(todoItems);
     const newTodo = {
         id,
-        title: todo.title,
-        status: todo.status
+        title: todo,
+        status: itemStatus.Todo
     };
     todoItems.push(newTodo);
     return newTodo;
@@ -22,8 +22,5 @@ function addTodoItem(todo) {
 function getNextId(items) {
     return items.reduce((max, x) => x.id > max ? x.id : max, 0) + 1;
 }
-const newTodo = addTodoItem({
-    title: "Buy PS5",
-    status: itemStatus.Todo
-});
+const newTodo = addTodoItem("Buy PS5.");
 console.log(JSON.stringify(newTodo));
