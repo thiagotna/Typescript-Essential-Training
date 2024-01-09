@@ -2,7 +2,8 @@ interface Contact extends Address {
     id: number;
     name: string;
     birthDate: Date;
-    status: ContactStatus
+    status: ContactStatus;
+    clone(name: string) : Contact
 }
 
 interface Address {
@@ -17,9 +18,10 @@ let primaryContact: Contact = {
     id: 1,
     name: "John",
     birthDate: new Date("19-01-1987"),
-    status: ContactStatus.Active,
+    status: ContactStatus.New,
     line1: "RUa José Barro Magaldi 867",
     province: "São Paulo",
     region: "South East",
-    postalCode: "05815-000"
+    postalCode: "05815-000",
+    clone: Contact.prototype.clone
 }
