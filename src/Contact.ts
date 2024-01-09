@@ -2,6 +2,7 @@ interface Contact extends Address {
     id: number;
     name: string;
     birthDate: Date;
+    status: ContactStatus
 }
 
 interface Address {
@@ -16,6 +17,7 @@ let primaryContact: Contact = {
     id: 1,
     name: "John",
     birthDate: new Date("19-01-1987"),
+    status: ContactStatus.Active,
     line1: "RUa José Barro Magaldi 867",
     province: "São Paulo",
     region: "South East",
