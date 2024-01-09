@@ -1,8 +1,8 @@
 //function clone( source: Contact) : Contact {
-function clone(source) {
+function clone2(source) {
     return Object.apply({}, source);
 }
-let m = {
+let m2 = {
     id: 2,
     name: "Marge Simpson",
     birthDate: new Date('03-03-1990'),
@@ -13,6 +13,13 @@ let m = {
     postalCode: "1234321",
     clone: Contact.prototype.clone
 };
-const dateRange = { startDate: Date.now(), endDate: Date.now() };
-const dateRangeCopy = clone(dateRange);
+// interface UserContact<TEexternalId> {
+//     id: number,
+//     name: string,
+//     username: string,
+//     externalId: TEexternalId,
+//     loadExternalId() : <TEexternalId>
+// }
+const dateRange2 = { startDate: Date.now(), endDate: Date.now() };
+const dateRangeCopy2 = clone(dateRange);
 clone(m); //Explicit defines the input and output of the method as determined when the method clone was written

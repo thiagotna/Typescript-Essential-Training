@@ -15,13 +15,13 @@ let m2: Contact = {
     clone: Contact.prototype.clone
 }
 
-interface UserContact<TEexternalId> {
-    id: number,
-    name: string,
-    username: string,
-    externalId: TEexternalId,
-    loadExternalId() : <TEexternalId>
-}
+// interface UserContact<TEexternalId> {
+//     id: number,
+//     name: string,
+//     username: string,
+//     externalId: TEexternalId,
+//     loadExternalId() : <TEexternalId>
+// }
 
 const dateRange2 =  {startDate: Date.now(), endDate:Date.now()}
 const dateRangeCopy2 = clone(dateRange)
