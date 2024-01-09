@@ -1,4 +1,5 @@
-function clone( source: Contact) : Contact {
+//function clone( source: Contact) : Contact {
+function clone<T1, T2>( source: T1) : T2 {
     return Object.apply({}, source)
 }
 
@@ -14,4 +15,7 @@ let m: Contact = {
     clone: Contact.prototype.clone
 }
 
-clone(m)
+const dateRange =  {startDate: Date.now(), endDate:Date.now()}
+const dateRangeCopy = clone(dateRange)
+
+clone<Contact, Date>(m) //Explicit defines the input and output of the method as determined when the method clone was written
