@@ -5,7 +5,10 @@
         "target": "ESNext", //JS version to be outputed
         "ignoreDeprecations": "5.0", //Ignore deprecated JS version for a specific Typrescript version
         //"noEmit": true, Emmit output file
-        "outDir": "build", //folder output name
+        "outDir": "build", //folder output name,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        
     },
     "include": ["src/**/*"]
 }
